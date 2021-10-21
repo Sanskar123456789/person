@@ -1,0 +1,26 @@
+<p-toast></p-toast>
+<div class="login">
+    <div class="container">
+        <div class="p-card" styleClass="p-card-shadow">
+            <div class="inputs">
+                <form [formGroup]="form">
+                    <p>{{tag}} Person Details</p>
+                    <input type="text" formControlName="Name" pInputText placeholder="Name"> 
+                    <br><br>
+                    <input type="number" formControlName="Age" pInputText placeholder="Age">
+                    <br><br>
+                    <label for="g">Select Gender</label>
+                    &nbsp;&nbsp;&nbsp;
+                    <select name="gender" id="g" pInputText formControlName="Gender">
+                        <option value={{true}} selected>Male</option>
+                        <option value={{false}}>Female</option>
+                    </select>
+                    <br><br>
+                    <input type="number" formControlName="Mobile" pInputText placeholder="PhoneNumber">
+                    <br><br>
+                    <p-button id="mb-1" label="Submit" (onClick)="onSubmit()"></p-button> 
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

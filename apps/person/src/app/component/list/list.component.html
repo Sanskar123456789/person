@@ -1,0 +1,24 @@
+<p-toast></p-toast>
+<p-table [value]="person" responsiveLayout="scroll">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>Mobile</th>
+            <th> </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-person>
+        <tr>
+            <td>{{person.Name}}</td>
+            <td>{{person.Age}}</td>
+            <td>{{person.Gender}}</td>
+            <td>{{person.Mobile}}</td>
+            <td>
+                <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deleteperson(person)" ></button>
+                <button pButton pRipple type="button" icon="pi pi-pencil" class="p-button-rounded p-button-info" (click)="updateperson(person)"></button>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
