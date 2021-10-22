@@ -13,7 +13,8 @@
         <tr>
             <td>{{person.Name}}</td>
             <td>{{person.Age}}</td>
-            <td>{{person.Gender}}</td>
+            <td *ngIf="person.Gender">Male</td>
+            <td *ngIf="!person.Gender">Female</td>
             <td>{{person.Mobile}}</td>
             <td>
                 <button pButton pRipple type="button" icon="pi pi-trash" class="p-button-rounded p-button-danger" (click)="deleteperson(person)" ></button>

@@ -14,7 +14,7 @@ import { PersonService } from '../../service/person.service';
 export class ListComponent implements OnInit,OnDestroy {
 
   person : Person[] = [];
-  $endsub: Subject<any> = new Subject();
+  $endsub: Subject<any> = new Subject();  
   constructor(private personService: PersonService,private router: Router,private messageService: MessageService) { }
 
   ngOnInit(): void {
